@@ -1,0 +1,26 @@
+.about-page header {
+  background-color: #000000b0;
+  padding: 70px 0;
+}
+.about-page header h2 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+.about-page .first-section {
+  background-color: #f7f7f7;
+  padding: 40px 0;
+}
+.about-page .card-custom {
+  background-color: white;
+  padding: 30px;
+  column-gap: 59px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.about-page .card-custom h5 {
+  margin: 10px 0;
+}
+
+.about-page .second-section .p-custom {
+  padding: 122px 100px 25px 302px;
+}

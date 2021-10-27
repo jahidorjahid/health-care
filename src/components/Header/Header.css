@@ -49,7 +49,3 @@
   font-family: monospace;
   letter-spacing: 0.5px;
 }
-.divider {
-  height: 2px;
-  background: linear-gradient(18deg, #2dcaf1, #1e0b9b);
-}

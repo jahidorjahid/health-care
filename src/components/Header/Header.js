@@ -2,6 +2,7 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import {} from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -26,9 +27,9 @@ const Header = () => {
         <div className="container">
           {/* Logo */}
           <div>
-            <a className="navbar-brand logo" href="/home">
+            <Link className="navbar-brand logo" to="/">
               Health<span> Care</span>
-            </a>
+            </Link>
           </div>
           {/* Toggle btn */}
           <button
@@ -47,47 +48,46 @@ const Header = () => {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav">
                 <li className="nav-item ms-4">
-                  <a
+                  <Link
                     className="nav-link"
                     activeStyle={{ color: "black" }}
-                    href="/"
+                    to="/"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item ms-4">
-                  <a
+                  <NavLink
                     className="nav-link"
                     activeStyle={{ color: "black" }}
-                    href="/about"
+                    to="/about"
                   >
                     About
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item ms-4">
-                  <a
+                  <NavLink
                     className="nav-link"
                     activeStyle={{ color: "black" }}
-                    href="/news"
+                    to="/news"
                   >
                     News
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item ms-4">
-                  <a
+                  <NavLink
                     className="nav-link"
                     activeStyle={{ color: "black" }}
-                    href="/contact"
+                    to="/contact"
                   >
                     Contact
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
-      <div className="divider"></div>
     </div>
   );
 };
