@@ -1,0 +1,34 @@
+.section-title,
+.sub-title {
+  font-family: "Montserrat", sans-serif;
+  color: #41658a;
+  font-weight: 800;
+}
+hr {
+  width: 50px;
+  height: 8px !important;
+  margin: 15px auto;
+  background-color: #680c81;
+}
+
+section .bg-color {
+  background-color: #2f3241;
+  color: white;
+}
+.btn-custom {
+  width: 150px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px !important;
+  background-color: #b55dce;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.why-us img {
+  border: 4px solid #dbebfb;
+  border-radius: 50%;
+}
+.why-us .sub-title {
+  margin-top: 15px;
+}
