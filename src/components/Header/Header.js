@@ -26,8 +26,8 @@ const Header = () => {
         <div className="container">
           {/* Logo */}
           <div>
-            <a className="navbar-brand" href="/home">
-              <span className="logo">Health Care</span>
+            <a className="navbar-brand logo" href="/home">
+              Health<span> Care</span>
             </a>
           </div>
           {/* Toggle btn */}

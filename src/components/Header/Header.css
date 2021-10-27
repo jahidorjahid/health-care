@@ -1,5 +1,5 @@
 .sub-header {
-  background: linear-gradient(90deg, #7316b1 0%, #07ccec 100%);
+  background-color: #41658a;
   color: white;
   padding: 6px 0;
 }
@@ -35,10 +35,13 @@
   background-color: #f5f7ff;
 }
 .logo {
-  color: #174bb6;
+  color: #41658a !important;
   font-size: 34px;
   font-family: fantasy;
   letter-spacing: 2px;
+}
+.logo span {
+  color: #6c6c6c;
 }
 .nav-link {
   font-size: 20px;
