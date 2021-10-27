@@ -70,7 +70,7 @@ const Header = () => {
                     activeStyle={{ color: "black" }}
                     href="/"
                   >
-                    Serviece
+                    News
                   </a>
                 </li>
                 <li className="nav-item ms-4">

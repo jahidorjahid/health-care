@@ -32,3 +32,50 @@ section .bg-color {
 .why-us .sub-title {
   margin-top: 15px;
 }
+
+.our-news {
+  background-color: #fafafa;
+}
+
+.our-news .date {
+  color: #919191;
+  font-weight: 700;
+}
+
+.our-news .category {
+  padding: 2px 4px;
+  background-color: #b55dce;
+  color: white;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
+.our-news .card-title {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #41658a;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.our-news .card-title:hover {
+  color: #4e647a91;
+  cursor: pointer;
+}
+
+.our-news .read-more {
+  text-decoration: none;
+  color: #919191;
+  font-weight: 700;
+}
+
+.our-news .read-more:hover {
+  color: #680c81 !important;
+}
+
+.our-news img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
