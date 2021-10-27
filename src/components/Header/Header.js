@@ -59,7 +59,7 @@ const Header = () => {
                   <a
                     className="nav-link"
                     activeStyle={{ color: "black" }}
-                    href="/"
+                    href="/about"
                   >
                     About
                   </a>
@@ -68,7 +68,7 @@ const Header = () => {
                   <a
                     className="nav-link"
                     activeStyle={{ color: "black" }}
-                    href="/"
+                    href="/news"
                   >
                     News
                   </a>
@@ -77,7 +77,7 @@ const Header = () => {
                   <a
                     className="nav-link"
                     activeStyle={{ color: "black" }}
-                    href="/"
+                    href="/contact"
                   >
                     Contact
                   </a>
