@@ -35,7 +35,7 @@ const Footer = () => {
             <div className="col-lg-4 posts">
               <h5 className="mb-5">Recent Posts</h5>
               <div className="d-flex gx-4">
-                <div class="flex-shrink-0">
+                <div className="flex-shrink-0">
                   <img
                     src="https://housemed.qodeinteractive.com/wp-content/uploads/2018/05/blog-post-img-6-150x150.jpg"
                     alt=""
@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="d-flex gx-4">
-                <div class="flex-shrink-0">
+                <div className="flex-shrink-0">
                   <img
                     src="https://housemed.qodeinteractive.com/wp-content/uploads/2018/05/blog-post-img-6-150x150.jpg"
                     alt=""
@@ -65,7 +65,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="d-flex gx-4">
-                <div class="flex-shrink-0">
+                <div className="flex-shrink-0">
                   <img
                     src="https://housemed.qodeinteractive.com/wp-content/uploads/2018/05/blog-post-img-6-150x150.jpg"
                     alt=""
@@ -97,7 +97,7 @@ const Footer = () => {
                       SATURDAY - SUNDAY Closed
                     </li>
                   </ul>
-                  <a href="/" class="btn book-btn rounded mt-3">
+                  <a href="/" className="btn book-btn rounded mt-3">
                     Book Appointment
                   </a>
                 </div>

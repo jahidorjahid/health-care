@@ -1,11 +1,18 @@
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowCircleRight,
+  faEnvelope,
+  faPhone,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import {} from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 import "./Header.css";
 
 const Header = () => {
+  const { user, logOut } = useAuth();
   return (
     <div>
       <div className="sub-header">
@@ -20,7 +27,34 @@ const Header = () => {
               <span className="ms-1">+880 1611-023881</span>
             </div>
           </div>
-          <div className="d-flex align-items-center"></div>
+          <div className="d-flex align-items-center">
+            {user.displayName && (
+              <span className="userName" style={{ marginRight: "15px" }}>
+                <FontAwesomeIcon
+                  style={{ color: "white", marginRight: "5px" }}
+                  icon={faUser}
+                />
+                {user.displayName}
+              </span>
+            )}
+            {!user.displayName ? (
+              <Link
+                to="/login"
+                className="btn auth-btn d-flex align-items-center"
+              >
+                Login or Register
+                <FontAwesomeIcon className="ms-2" icon={faArrowCircleRight} />
+              </Link>
+            ) : (
+              <button
+                onClick={logOut}
+                className="btn auth-btn d-flex align-items-center"
+              >
+                Log Out{" "}
+                <FontAwesomeIcon className="ms-2" icon={faArrowCircleRight} />
+              </button>
+            )}
+          </div>
         </div>
       </div>
       <nav className="navbar navbar-expand-lg navbar-light main-header bg-nav-color">
