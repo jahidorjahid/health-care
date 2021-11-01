@@ -28,16 +28,16 @@ const Header = () => {
             </div>
           </div>
           <div className="d-flex align-items-center">
-            {user.displayName && (
+            {user.email && (
               <span className="userName" style={{ marginRight: "15px" }}>
                 <FontAwesomeIcon
                   style={{ color: "white", marginRight: "5px" }}
                   icon={faUser}
                 />
-                {user.displayName}
+                {user.displayName || "No Name"}
               </span>
             )}
-            {!user.displayName ? (
+            {!user.email ? (
               <Link
                 to="/login"
                 className="btn auth-btn d-flex align-items-center"

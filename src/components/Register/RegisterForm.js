@@ -11,17 +11,18 @@ import useAuth from "../../hooks/useAuth";
 const RegisterForm = () => {
   const {
     handleNameChange,
-    handleEmailChnage,
-    handlePassChnage,
+    handleEmailChange,
+    handlePassChange,
     handleRegister,
     loginWithGoogle,
     error,
   } = useAuth();
+
   const location = useLocation();
   const history = useHistory();
-  const redirect_uri = location.state?.from || "/home";
+  const redirect_uri = location.state?.from || "/";
 
-  const handleGglLogin = () => {
+  const processloginWithGoogle = () => {
     loginWithGoogle().then((result) => {
       history.push(redirect_uri);
     });
@@ -54,7 +55,7 @@ const RegisterForm = () => {
               </div>
               <div className="form-floating mb-3">
                 <input
-                  onBlur={handleEmailChnage}
+                  onBlur={handleEmailChange}
                   type="email"
                   className="form-control rounded-3"
                   id="floatingInput"
@@ -71,7 +72,7 @@ const RegisterForm = () => {
               </div>
               <div className="form-floating">
                 <input
-                  onBlur={handlePassChnage}
+                  onBlur={handlePassChange}
                   type="password"
                   className="form-control rounded-3"
                   id="floatingPassword"
@@ -93,7 +94,7 @@ const RegisterForm = () => {
               />
               <div className="or">----------------- OR -----------------</div>
               <div
-                onClick={handleGglLogin}
+                onClick={processloginWithGoogle}
                 className="googleBtn d-flex align-items-center justify-content-between"
                 style={{ width: "235px" }}
               >

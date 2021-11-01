@@ -16,7 +16,7 @@ initializeAuthentication();
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
-  const [name, setName] = useState("");
+  const [registeredUserName, setregisteredUserName] = useState("");
   const [email, setEmail] = useState("");
   const [pass, setpass] = useState("");
   const [error, setError] = useState("");
@@ -29,16 +29,16 @@ const useFirebase = () => {
   };
 
   const handleNameChange = (e) => {
-    setName(e.target.value);
+    setregisteredUserName(e.target.value);
   };
-  const handleEmailChnage = (e) => {
+  const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
-  const handlePassChnage = (e) => {
+  const handlePassChange = (e) => {
     setpass(e.target.value);
   };
 
-  const logInUsingEmail = (email, pass, e) => {
+  const loginWithEmail = (email, pass) => {
     return signInWithEmailAndPassword(auth, email, pass);
   };
 
@@ -58,7 +58,6 @@ const useFirebase = () => {
   const registerUsingEmail = (email, pass) => {
     createUserWithEmailAndPassword(auth, email, pass)
       .then((result) => {
-        console.log(result.user);
         setError("");
         setUserName();
       })
@@ -68,7 +67,9 @@ const useFirebase = () => {
   };
 
   const setUserName = () => {
-    updateProfile(auth.currentUser, { displayName: name }).then(() => {});
+    updateProfile(auth.currentUser, { displayName: registeredUserName }).then(
+      () => {}
+    );
   };
 
   const logOut = () => {
@@ -87,12 +88,13 @@ const useFirebase = () => {
 
   return {
     loginWithGoogle,
-    logInUsingEmail,
+    loginWithEmail,
     handleNameChange,
-    handleEmailChnage,
-    handlePassChnage,
+    handleEmailChange,
+    handlePassChange,
     handleRegister,
     error,
+    setError,
     logOut,
     user,
   };

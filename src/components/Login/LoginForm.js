@@ -1,43 +1,55 @@
 import { faEnvelopeOpen, faLock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import { React, useState } from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import "./Login.css";
 import useAuth from "../../hooks/useAuth";
 
 const LoginForm = () => {
-  const { loginWithGoogle } = useAuth();
+  const { loginWithEmail, loginWithGoogle, error, setError } = useAuth();
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputPassword, setInputPassword] = useState("");
 
   const location = useLocation();
   let history = useHistory();
   const redirectURL = location.state?.from || "/";
 
-  const processLogin = () => {
+  // process to login with Email and Password
+  const processLoginWithEmail = (e) => {
+    e.preventDefault();
+    loginWithEmail(inputEmail, inputPassword)
+      .then((result) => {
+        history.push(redirectURL);
+      })
+      .catch((err) => setError(err.message));
+  };
+
+  // process to login with Google or Gmail
+  const processLoginWithGoogle = () => {
     loginWithGoogle()
       .then((result) => {
         history.push(redirectURL);
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => setError(err.message));
   };
 
-  const handleEmailChnage = () => {
-    return;
+  const handleInputEmailChange = (e) => {
+    setInputEmail(e.target.value);
   };
-  const handlePassChnage = () => {
-    return;
+  const handleInputPasswordChange = (e) => {
+    setInputPassword(e.target.value);
   };
 
-  const error = "";
   return (
     <div className="form-box">
       <div className="container">
         <h1 className="text-danger text-center my-4">{error}</h1>
         <div className="form py-4">
           <h2 className="mb-5">Login</h2>
-          <form onSubmit={processLogin}>
+          <form onSubmit={processLoginWithEmail}>
             <div className="form-floating mb-3">
               <input
-                onBlur={handleEmailChnage}
+                onBlur={handleInputEmailChange}
                 type="email"
                 className="form-control rounded-3"
                 id="floatingInput"
@@ -54,7 +66,7 @@ const LoginForm = () => {
             </div>
             <div className="form-floating">
               <input
-                onBlur={handlePassChnage}
+                onBlur={handleInputPasswordChange}
                 type="password"
                 className="form-control rounded-3"
                 id="floatingPassword"
@@ -76,7 +88,7 @@ const LoginForm = () => {
             />
             <div className="or">----------------- OR -----------------</div>
             <div
-              onClick={processLogin}
+              onClick={processLoginWithGoogle}
               className="googleBtn d-flex align-items-center justify-content-center align-items-center gx-2"
             >
               <div className="google-icon-wrapper">
