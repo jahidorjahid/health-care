@@ -19,11 +19,12 @@ const Footer = () => {
             <div className="col-lg-4">
               <h2 className="mb-5">Health Care</h2>
               <p>
-                Ut wisi enim ad minim veniam, quis laore nostrud exerci tation
-                ulm hedi corper turet suscipit lobortis nisl ut aliquip erat
-                volutpat Exerci tation
+                Health care refers to the efforts that medical professionals
+                make to restore our physical and mental well-being. The term
+                also includes the provision of services to maintain emotional
+                well-being.
               </p>
-              <p>Phone: 97987979789</p>
+              <p>Phone: 01611023881</p>
               <p>Address: Sylhet, Bangladesh</p>
               <div className="d-flex justify-content-between w-25">
                 <FontAwesomeIcon icon={faFacebook} className="social-icon" />

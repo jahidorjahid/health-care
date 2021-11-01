@@ -5,13 +5,21 @@ const Home = () => {
   return (
     <div>
       <div>
+        <div>
+          <img
+            src="/images/hero-img/hero.png"
+            alt=""
+            className="img-fluid"
+            style={{ height: "100%" }}
+          />
+        </div>
         <section className="container py-5 text-center">
           <h2 className="section-title mt-3">What to Expect From Us</h2>
           <hr />
           <p className="w-50 mx-auto">
-            Temporibus autem quibusdam et aut officiis debitis aut rerum
-            necessitatibus saepe eveniet voluptates repudiandae sint et
-            molestiae non recusandae aliquetenean
+            Changes in the healthcare industry usually occur at the legislative
+            level, but once enacted these changes have a direct impact on
+            facility operations and the use of resources.
           </p>
 
           <div className="row my-5 mb-3">
@@ -19,32 +27,32 @@ const Home = () => {
               <img src="/images/h8-custom-icon-1.png" alt="" />
               <h5 className="sub-title">Calf Muscle Injury</h5>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, sed quia magni
+                A pulled calf muscle occurs when the muscles in the back of your
+                lower leg. this injury can complete tearing of the muscle.
               </p>
             </div>
             <div className="col-lg-3 col-md-6">
               <img src="/images/h8-custom-icon-2.png" alt="" />
               <h5 className="sub-title">Ankle Sprain</h5>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, sed quia magni
+                A sprained ankle is an injury that occurs when you roll, twist
+                or turn your ankle in an awkward way. This can stretch or tear
               </p>
             </div>
             <div className="col-lg-3 col-md-6">
               <img src="/images/h8-custom-icon-3.png" alt="" />
               <h5 className="sub-title">Dancing Injuries</h5>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, sed quia magni
+                Hip injuries: snapping hip syndrome, hip impingement, labral
+                tears, hip flexor tendonitis, hip bursitis .
               </p>
             </div>
             <div className="col-lg-3 col-md-6">
               <img src="/images/h8-custom-icon-4.png" alt="" />
               <h5 className="sub-title">Cerebral Palsy</h5>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, sed quia magni
+                Cerebral palsy is a group of disorders that affect movement and
+                muscle tone or posture. It's caused by damage ...
               </p>
             </div>
           </div>
@@ -64,9 +72,10 @@ const Home = () => {
                   What Does Your Next Assessment Involve?
                 </h2>
                 <p className="my-4">
-                  Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                  ea commodo consequat duis autem vel eum iriure augue duis
-                  dolore.
+                  Assessment tests for jobs, also known as pre-employment tests,
+                  help hiring managers determine whether a candidate has the
+                  skills, work style, knowledge or personality to succeed in a
+                  job.
                 </p>
                 <button className="btn btn-custom mt-4">Learn More</button>
               </div>
@@ -78,9 +87,8 @@ const Home = () => {
           <h2 className="section-title mt-3">Why Choose Us</h2>
           <hr />
           <p className="w-50 mx-auto">
-            Temporibus autem quibusdam et aut officiis debitis aut rerum
-            necessitatibus saepe eveniet voluptates repudiandae sint et
-            molestiae non recusandae aliquetenean
+            We’ve been established for over 30 years providing private
+            healthcare and supporting local businesses and families
           </p>
 
           <div className="row my-5 mb-3">
@@ -88,32 +96,36 @@ const Home = () => {
               <img src="/images/why-us/h8-img-2.png" alt="" />
               <h5 className="sub-title">Anonymity</h5>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, sed quia magni
+                In health sector, trust is considered important because it
+                indirectly influences the quality of health care through patient
+                satisfaction
               </p>
             </div>
             <div className="col-lg-3 col-md-6">
               <img src="/images/why-us/h8-img-3.png" alt="" />
               <h5 className="sub-title">Availability</h5>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, sed quia magni
+                Availability – the sufficient supply and appropriate stock of
+                health workers, with the competencies and skill‐mix to match the
+                health needs of the population.
               </p>
             </div>
             <div className="col-lg-3 col-md-6">
               <img src="/images/why-us/h8-img-4.png" alt="" />
               <h5 className="sub-title">Convenient Place</h5>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, sed quia magni
+                Flow diagram of systematic review to identify included studies.
+                All financial values were converted to Great Britain pounds
+                using a currency conversion
               </p>
             </div>
             <div className="col-lg-3 col-md-6">
               <img src="/images/why-us/h8-img-5.png" alt="" />
               <h5 className="sub-title">Experience</h5>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, sed quia magni
+                Patient experience encompasses the range of interactions that
+                patients have with the health care system, including their care
+                from health plans, and from ...
               </p>
             </div>
           </div>
@@ -123,8 +135,8 @@ const Home = () => {
             <h2 className="section-title mt-3">Our News</h2>
             <hr />
             <p className="w-50 mx-auto">
-              Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-              commodo non habent claritatem insitamconsequat duis autem
+              Medical news and health news headlines posted throughout the day,
+              every day.
             </p>
           </div>
           <div className="container my-5">

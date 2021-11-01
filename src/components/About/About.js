@@ -14,8 +14,9 @@ const About = () => {
         <h2>We will Help you With</h2>
         <hr />
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Aenean commodo ligula.
+          We will help you understand how to get, pay for, and use health
+          insurance ... This is great because it means you can take care of any
+          small health problem.
         </p>
         <div className="container">
           <div className="row gx-5">
@@ -23,24 +24,27 @@ const About = () => {
               <img src="/images/about/aboutus_icon_img_01.png" alt="" />
               <h5>Career & Business</h5>
               <p>
-                Ut wisi enim ad minim veniam, quis laore nostrud exerci tation
-                ulm hedi corper turet suscipit lobortis nisl
+                Medical billers and coders perform a specialized role in today's
+                healthcare practices. Job titles in this field include medical
+                billing and coding specialist...
               </p>
             </div>
             <div className="col-lg-4 card-custom">
               <img src="/images/about/aboutus_icon_img_02.png" alt="" />
-              <h5>Career & Business</h5>
+              <h5>Mental & Psysical Care</h5>
               <p>
-                Ut wisi enim ad minim veniam, quis laore nostrud exerci tation
-                ulm hedi corper turet suscipit lobortis nisl
+                Mental health professionals should encourage patients to monitor
+                and chart their own weight and should sensitize patients and
+                their caregivers to the
               </p>
             </div>
             <div className="col-lg-4 card-custom">
               <img src="/images/about/aboutus_icon_img_03.png" alt="" />
-              <h5>Career & Business</h5>
+              <h5>People & Relationships</h5>
               <p>
-                Ut wisi enim ad minim veniam, quis laore nostrud exerci tation
-                ulm hedi corper turet suscipit lobortis nisl
+                As physicians, we often like to think that the doctor- patient
+                relationship is the key to effective health care. In reality,
+                while the doctor-patient ...
               </p>
             </div>
           </div>
@@ -55,10 +59,9 @@ const About = () => {
                 The Health Center National Hospital
               </h2>
               <p className="my-5">
-                Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-                Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
-                Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-                ullamcorper ultricies.
+                Health care quality and patient safety are deeply connected.
+                Both are central to ODPHP’s mission and efforts to improve the
+                health of all Americans.
               </p>
               <strong>Victoria Fernandez</strong>
               <span className="d-block">CARDIAC SURGERY</span>
