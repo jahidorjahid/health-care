@@ -1,0 +1,23 @@
+.news-img img {
+  width: 200px;
+  height: 140px;
+  margin-right: 80px;
+}
+
+.news-title a {
+  color: black;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.news-title a:hover {
+  color: rgb(240, 29, 29);
+}
+
+.news-title span {
+  font-size: 12px;
+  background-color: #41658a;
+  color: white;
+  padding: 5px 10px;
+}

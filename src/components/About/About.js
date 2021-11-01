@@ -66,7 +66,11 @@ const About = () => {
           </div>
 
           <div className="col-lg-6">
-            <img src="/images/about/aboutus_img_02.jpg" alt="" />
+            <img
+              className="img-fluid"
+              src="/images/about/aboutus_img_02.jpg"
+              alt=""
+            />
           </div>
         </div>
       </section>

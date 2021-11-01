@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
+import News from "./components/News/News";
 import Register from "./components/Register/Register";
 import AuthProvider from "./Context/AuthProvider";
 
@@ -21,6 +22,11 @@ function App() {
           <Route exact path="/about">
             <Header></Header>
             <About></About>
+            <Footer></Footer>
+          </Route>
+          <Route exact path="/news">
+            <Header></Header>
+            <News></News>
             <Footer></Footer>
           </Route>
           <Route exact path="/contact">
