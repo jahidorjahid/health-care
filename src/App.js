@@ -15,48 +15,34 @@ function App() {
   return (
     <AuthProvider>
       <Router>
+        <Header></Header>
         <Switch>
           <Route exact path="/">
-            <Header></Header>
             <Home></Home>
-            <Footer></Footer>
           </Route>
           <Route exact path="/about">
-            <Header></Header>
             <About></About>
-            <Footer></Footer>
           </Route>
           <Route exact path="/news">
-            <Header></Header>
             <News></News>
-            <Footer></Footer>
           </Route>
           <Route exact path="/contact">
-            <Header></Header>
             <Contact></Contact>
-            <Footer></Footer>
           </Route>
           <Route exact path="/login">
-            <Header></Header>
             <Login></Login>
-            <Footer></Footer>
           </Route>
           <Route exact path="/register">
-            <Header></Header>
             <Register></Register>
-            <Footer></Footer>
           </Route>
           <ProtectedRoute path="/news/:slug">
-            <Header></Header>
             <Single></Single>
-            <Footer></Footer>
           </ProtectedRoute>
           <Route path="*">
-            <Header></Header>
             <h1>404 Not Found</h1>
-            <Footer></Footer>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </AuthProvider>
   );
