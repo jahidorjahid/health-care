@@ -7,7 +7,8 @@ const News = () => {
   useEffect(() => {
     fetch("./fakedb.json")
       .then((res) => res.json())
-      .then((data) => setNews(data));
+      .then((data) => setNews(data))
+      .catch((error) => console.log(error.message));
   }, []);
 
   return (

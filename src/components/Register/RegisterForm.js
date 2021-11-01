@@ -15,6 +15,7 @@ const RegisterForm = () => {
     handlePassChange,
     handleRegister,
     loginWithGoogle,
+    setError,
     error,
   } = useAuth();
 
@@ -23,9 +24,11 @@ const RegisterForm = () => {
   const redirect_uri = location.state?.from || "/";
 
   const processloginWithGoogle = () => {
-    loginWithGoogle().then((result) => {
-      history.push(redirect_uri);
-    });
+    loginWithGoogle()
+      .then((result) => {
+        history.push(redirect_uri);
+      })
+      .catch((error) => setError(error.message));
   };
 
   return (

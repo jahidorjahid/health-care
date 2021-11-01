@@ -53,10 +53,7 @@ const useFirebase = () => {
       return;
     }
 
-    registerUsingEmail(email, pass);
-  };
-  const registerUsingEmail = (email, pass) => {
-    createUserWithEmailAndPassword(auth, email, pass)
+    registerUsingEmail(email, pass)
       .then((result) => {
         setError("");
         setUserName();
@@ -64,6 +61,10 @@ const useFirebase = () => {
       .catch((error) => {
         setError(error.message);
       });
+  };
+
+  const registerUsingEmail = (email, pass) => {
+    return createUserWithEmailAndPassword(auth, email, pass);
   };
 
   const setUserName = () => {

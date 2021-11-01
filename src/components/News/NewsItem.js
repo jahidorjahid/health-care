@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const NewsItem = (props) => {
-  const { title, img_url, cat } = props.data;
-  const titleToSlug = title.replace(/ /g, "-");
+  const { id, title, img_url, cat } = props.data;
 
   return (
     <div className="col-md-6">
@@ -12,10 +11,7 @@ const NewsItem = (props) => {
           <img src={img_url} alt="" className="img-fluid rounded" />
         </div>
         <div className="news-title">
-          <Link
-            to={"/news/" + titleToSlug}
-            className="d-block text-decoration-none"
-          >
+          <Link to={`/news/${id}`} className="d-block text-decoration-none">
             {title.slice(0, 46)}
           </Link>
           Category: <span className="rounded">{cat}</span>

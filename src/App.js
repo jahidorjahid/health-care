@@ -35,7 +35,7 @@ function App() {
           <Route exact path="/register">
             <Register></Register>
           </Route>
-          <ProtectedRoute path="/news/:slug">
+          <ProtectedRoute path="/news/:newsId">
             <Single></Single>
           </ProtectedRoute>
           <Route path="*">
