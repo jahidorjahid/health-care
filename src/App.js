@@ -6,7 +6,9 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import News from "./components/News/News";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import Register from "./components/Register/Register";
+import Single from "./components/Single/Single";
 import AuthProvider from "./Context/AuthProvider";
 
 function App() {
@@ -44,6 +46,11 @@ function App() {
             <Register></Register>
             <Footer></Footer>
           </Route>
+          <ProtectedRoute path="/news/:slug">
+            <Header></Header>
+            <Single></Single>
+            <Footer></Footer>
+          </ProtectedRoute>
           <Route path="*">
             <Header></Header>
             <h1>404 Not Found</h1>

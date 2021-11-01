@@ -1,7 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NewsItem = (props) => {
   const { title, img_url, cat } = props.data;
+  const titleToSlug = title.replace(/ /g, "-");
+
   return (
     <div className="col-md-6">
       <div className="d-flex justify-content-between">
@@ -9,9 +12,12 @@ const NewsItem = (props) => {
           <img src={img_url} alt="" className="img-fluid rounded" />
         </div>
         <div className="news-title">
-          <a href="/" className="d-block text-decoration-none">
+          <Link
+            to={"/news/" + titleToSlug}
+            className="d-block text-decoration-none"
+          >
             {title.slice(0, 46)}
-          </a>
+          </Link>
           Category: <span className="rounded">{cat}</span>
         </div>
       </div>

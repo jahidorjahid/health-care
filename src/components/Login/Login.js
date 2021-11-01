@@ -1,17 +1,21 @@
 import { faEnvelopeOpen, faLock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import "./Login.css";
 import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
   const { loginWithGoogle } = useAuth();
 
+  const location = useLocation();
+  let history = useHistory();
+  const redirectURL = location.state?.from || "/";
+
   const processLogin = () => {
     loginWithGoogle()
       .then((result) => {
-        console.log("logged in success");
+        history.push(redirectURL);
       })
       .catch((err) => console.log(err.message));
   };
