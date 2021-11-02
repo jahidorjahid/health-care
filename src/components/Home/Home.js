@@ -1,7 +1,22 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import "./Home.css";
+import NewsItem from "./NewsItem";
 
 const Home = () => {
+  const API_URL = "/fakedb.json";
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    fetch(API_URL)
+      .then((res) => res.json())
+      .then((data) => setArticles(data))
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
+  console.log("test our production: ", articles.slice(0, 3));
+
   return (
     <div>
       <div>
@@ -141,90 +156,9 @@ const Home = () => {
           </div>
           <div className="container my-5">
             <div className="row gy-5 card-deck">
-              <div className="col-md-4">
-                <div className="card overflow-hidden rounded shadow">
-                  <div className="overflow-hidden">
-                    <img
-                      className="img-fluid"
-                      src="https://housemed.qodeinteractive.com/wp-content/uploads/2018/05/blog-post-img-1.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="card-body">
-                    <span className="date">MAY 25, 2018</span>{" "}
-                    <span className="category">Cardiology</span>
-                    <a href="/" className="card-title">
-                      Grown by Nature
-                    </a>
-                    <p className="card-text">
-                      This is a longer card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p className="card-text">
-                      <a href="/" className="text-muted read-more">
-                        Ream More &gt;
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="card overflow-hidden rounded shadow">
-                  <div className="overflow-hidden">
-                    <img
-                      className="img-fluid"
-                      src="https://housemed.qodeinteractive.com/wp-content/uploads/2018/05/blog-post-img-1.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="card-body">
-                    <span className="date">MAY 25, 2018</span>{" "}
-                    <span className="category">Cardiology</span>
-                    <a href="/" className="card-title">
-                      Grown by Nature
-                    </a>
-                    <p className="card-text">
-                      This is a longer card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p className="card-text">
-                      <a href="/" className="text-muted read-more">
-                        Ream More &gt;
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="card overflow-hidden rounded shadow">
-                  <div className="overflow-hidden">
-                    <img
-                      className="img-fluid"
-                      src="https://housemed.qodeinteractive.com/wp-content/uploads/2018/05/blog-post-img-1.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="card-body">
-                    <span className="date">MAY 25, 2018</span>{" "}
-                    <span className="category">Cardiology</span>
-                    <a href="/" className="card-title">
-                      Grown by Nature
-                    </a>
-                    <p className="card-text">
-                      This is a longer card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p className="card-text">
-                      <a href="/" className="text-muted read-more">
-                        Ream More &gt;
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              {articles.slice(0, 3).map((article) => (
+                <NewsItem data={article}></NewsItem>
+              ))}
             </div>
           </div>
         </section>
