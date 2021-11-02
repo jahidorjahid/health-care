@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import News from "./components/News/News";
+import NotFound from "./components/NotFound/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import Register from "./components/Register/Register";
 import Single from "./components/Single/Single";
@@ -39,7 +40,7 @@ function App() {
             <Single></Single>
           </ProtectedRoute>
           <Route path="*">
-            <h1>404 Not Found</h1>
+            <NotFound></NotFound>
           </Route>
         </Switch>
         <Footer></Footer>
