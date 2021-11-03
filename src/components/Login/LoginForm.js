@@ -44,7 +44,7 @@ const LoginForm = () => {
     <div className="form-box">
       <div className="container">
         <h1 className="text-danger text-center my-4">{error}</h1>
-        <div className="form py-4">
+        <div className="form py-4 w-lg-25">
           <h2 className="mb-5">Login</h2>
           <form onSubmit={processLoginWithEmail}>
             <div className="form-floating mb-3">
@@ -86,7 +86,7 @@ const LoginForm = () => {
               className="btn mt-4 auth-button"
               value="Login"
             />
-            <div className="or">----------------- OR -----------------</div>
+            <div className="or">OR</div>
             <div
               onClick={processLoginWithGoogle}
               className="googleBtn d-flex align-items-center justify-content-center align-items-center gx-2"

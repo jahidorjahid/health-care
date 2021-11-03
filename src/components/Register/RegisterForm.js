@@ -95,7 +95,7 @@ const RegisterForm = () => {
                 className="btn mt-4 auth-button"
                 value="Register"
               />
-              <div className="or">----------------- OR -----------------</div>
+              <div className="or">OR</div>
               <div
                 onClick={processloginWithGoogle}
                 className="googleBtn d-flex align-items-center justify-content-between"
