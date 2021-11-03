@@ -6,11 +6,21 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import { React, useEffect, useState } from "react";
 import {} from "react-bootstrap";
 import "./Footer.css";
+import RecentPost from "./RecentPost";
 
 const Footer = () => {
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    fetch("./fakedb.json")
+      .then((res) => res.json())
+      .then((data) => setNews(data))
+      .catch((error) => console.log(error.message));
+  }, []);
+
   return (
     <div>
       <div className="footer pt-5">
@@ -35,51 +45,9 @@ const Footer = () => {
             </div>
             <div className="col-lg-4 posts">
               <h5 className="mb-5">Recent Posts</h5>
-              <div className="d-flex gx-4">
-                <div className="flex-shrink-0">
-                  <img
-                    src="https://housemed.qodeinteractive.com/wp-content/uploads/2018/05/blog-post-img-6-150x150.jpg"
-                    alt=""
-                    className="img-fluid"
-                  />
-                </div>
-                <div className="flex-grow-1 ms-3">
-                  <p className="title">4 way to use virtual care</p>
-                  <a href="/" className="date">
-                    23 Jun 2021
-                  </a>
-                </div>
-              </div>
-              <div className="d-flex gx-4">
-                <div className="flex-shrink-0">
-                  <img
-                    src="https://housemed.qodeinteractive.com/wp-content/uploads/2018/05/blog-post-img-6-150x150.jpg"
-                    alt=""
-                    className="img-fluid"
-                  />
-                </div>
-                <div className="flex-grow-1 ms-3">
-                  <p className="title">4 way to use virtual care</p>
-                  <a href="/" className="date">
-                    23 Jun 2021
-                  </a>
-                </div>
-              </div>
-              <div className="d-flex gx-4">
-                <div className="flex-shrink-0">
-                  <img
-                    src="https://housemed.qodeinteractive.com/wp-content/uploads/2018/05/blog-post-img-6-150x150.jpg"
-                    alt=""
-                    className="img-fluid"
-                  />
-                </div>
-                <div className="flex-grow-1 ms-3">
-                  <p className="title">4 way to use virtual care</p>
-                  <a href="/" className="date">
-                    23 Jun 2021
-                  </a>
-                </div>
-              </div>
+              {news.slice(0, 3).map((post) => (
+                <RecentPost data={post}></RecentPost>
+              ))}
             </div>
             <div className="col-lg-4">
               <div
