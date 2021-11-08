@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
           </div>
           <hr />
-          <p className="pb-3">
+          <p className="pb-3 mb-0">
             &copy; 2021 - All rights reservered by Health Care
           </p>
         </div>
