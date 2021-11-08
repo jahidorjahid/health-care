@@ -18,7 +18,7 @@ const NewsItem = ({ data }) => {
           <p className="card-text">{content.slice(0, 150)}</p>
           <p className="card-text">
             <Link to={`/news/${id}`} className="text-muted read-more">
-              Ream More &gt;
+              Read More &gt;
             </Link>
           </p>
         </div>
