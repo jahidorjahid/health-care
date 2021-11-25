@@ -15,8 +15,6 @@ const Home = () => {
       });
   }, []);
 
-  console.log("test our production: ", articles.slice(0, 3));
-
   return (
     <div>
       <div>
