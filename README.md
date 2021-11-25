@@ -14,17 +14,17 @@ This is an education App built with React, React Router and Bootstrap cdn.
 
 - In your directory after cloning please do the following:
 
-> Install dependencies for server in `package.json`
-
-```shell
-$ cd health-care-server-side
-$ npm install
-```
-
-> Install dependencies on client side
+> Install dependencies
 
 ```shell
 $ cd health-care-client-side
+$ npm install
+```
+
+> Run this app
+
+```shell
+$ npm/yarn start
 $ npm install
 ```
 
