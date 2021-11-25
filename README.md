@@ -25,7 +25,6 @@ $ npm install
 
 ```shell
 $ npm/yarn start
-$ npm install
 ```
 
 ## Features
