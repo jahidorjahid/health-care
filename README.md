@@ -17,7 +17,7 @@ This is an education App built with React, React Router and Bootstrap cdn.
 > Install dependencies for server in `package.json`
 
 ```shell
-$ cd react-education-app
+$ cd health-care-server-side
 $ npm install
 ```
 
