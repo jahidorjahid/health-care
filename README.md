@@ -1,6 +1,6 @@
 # Getting start with <a href="https://heath-care-web.web.app/" target="_blank">Health Care Website</a>
 
-<a href="https://heath-care-web.web.app/"><img src="https://github.com/Programming-Hero-Web-Course3/healthcare-related-website-jahidorjahid/blob/main/screenshot.jpeg" alt=""></a>
+<a href="https://heath-care-web.web.app/"><img src="https://github.com/jahidorjahid/health-care-client-side/blob/main/screenshot.jpeg" alt=""></a>
 This project was with [Create React App](https://github.com/facebook/create-react-app).
 
 # React Health Care Web App
@@ -9,7 +9,7 @@ This is an education App built with React, React Router and Bootstrap cdn.
 
 ### Installation
 
-- Please clone this repository using `git clone https://github.com/Programming-Hero-Web-Course3/healthcare-related-website-jahidorjahid/` first. There will be two package.json files, one for the server side and the other for the client side.
+- Please clone this repository using `git clone https://github.com/jahidorjahid/health-care-client-side/` first. There will be two package.json files, one for the server side and the other for the client side.
   This is because server and client have to start at the same time. If you do not have NPM installed, please do so at `https://www.npmjs.com`. This is also a very good project for having a starter platform with react.js.
 
 - In your directory after cloning please do the following:
@@ -24,7 +24,7 @@ $ npm install
 > Install dependencies on client side
 
 ```shell
-$ cd react-education-app/client
+$ cd health-care-client-side
 $ npm install
 ```
 
